@@ -1,0 +1,12 @@
+line-length = 100
+target-version = "py311"
+
+[lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = [
+    "N802",  # Function names with standard engineering notation (e.g., wavelength_L, berthing_energy_J)
+    "N803",  # Argument names with standard engineering notation (e.g., T_s, D_m, Ce, Cd, Cm)
+    "N806",  # Variables with standard engineering notation (e.g., E, L, R, Q, FS, FpL)
+    "N815",  # mixedCase variables in Pydantic models with units (e.g., energy_J, fender_reaction_kN)
+    "E501",  # Line too long - allow for docstrings and long prompts
+]
